@@ -34,17 +34,13 @@ namespace TravelBook
                 newUser.Password = passwordTxb.Text.Trim();
                 newUser.username = userNameTxb.Text.Trim();
                 newUser.regDate = DateTime.Now;
-                user.isLogined = true;
                 db.userTBL.Add(newUser);
                 db.SaveChanges();
                 MessageBox.Show("registration completed");
-                //main.userLogin = true;
-                //need to return to home page/feed
-
             }
             else if(passwordTxb.Text.Trim() != confirmPasswordTxb.Text.Trim())
             {
-                MessageBox.Show("Passwords text boxes are not matching");
+                MessageBox.Show("Passwords are not matching");
             }
 
         }
