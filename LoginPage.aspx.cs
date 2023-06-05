@@ -25,7 +25,7 @@ namespace TravelBook
             userTBL user = (from s in db.userTBL where s.username == usernameTxb.Text.Trim() select s).FirstOrDefault();
             if(user == null)
             {
-                MessageBox.Show("user is not exist");
+                MessageBox.Show("user does not exist");
             }
             else
             {
