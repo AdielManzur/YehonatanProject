@@ -46,7 +46,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Travel Book</a>e
+                    <a class="navbar-brand" runat="server"
+                    <%if (HttpContext.Current.Session["UserId"] != null)
+                        {%>
+                        href="~/Feed"
+                    <%}
+                        else
+                        {%>
+                            href = "~/LoginPage"
+                        <% } %>
+                        >Travel Book</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
