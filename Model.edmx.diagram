@@ -4,8 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7ccc9ba2a83b41d2ba835b1fb5bccc3f" Name="Diagram1">
+      <Diagram DiagramId="dc3062afdddd4fc0b5745db1d4ff7c55" Name="Diagram1" >
         <EntityTypeShape EntityType="dbModel.userTBL" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbModel.summeryTBL" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

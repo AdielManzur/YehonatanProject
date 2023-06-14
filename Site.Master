@@ -38,7 +38,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top" >
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,26 +46,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server"
-                    <%if (HttpContext.Current.Session["UserId"] != null)
-                        {%>
-                        href="~/Feed"
-                    <%}
-                        else
-                        {%>
-                            href = "~/LoginPage"
-                        <% } %>
-                        >Travel Book</a>
+                    <% if (HttpContext.Current.Session["UserId"] != null) { %>
+                        <a class="navbar-brand" runat="server" href="Feed">Study Summaries</a>                  
+                    <% } else { %>  
+                        <a class="navbar-brand" runat="server" href="LoginPage">Study Summaries</a>
+                    <% } %>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <%if (HttpContext.Current.Session["UserId"] == null) { %>
-                          <li><a runat="server" href="~/LoginPage">Log In</a></li>
-                        <%} else {%>
-                            <li><a runat="server" href="~/Feed">Feed</a></li>                        
-                            <li><a runat="server" href="~/About">About</a></li>
-                            <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <% } %>
+                            <%if (HttpContext.Current.Session["UserId"] == null) { %>
+                              <li><a  href="LoginPage">Log In</a></li>
+                            <%} else {%>
+                                <li><a  href="Feed">Feed</a></li>     
+                                <li><a  href="AddPostPage">Add Summery</a></li>    
+                                <li><a  href="About">About</a></li>
+                                <li><a  href="Contact">Contact</a></li>
+                            <% } %>
                     </ul> 
                 </div>
             </div>

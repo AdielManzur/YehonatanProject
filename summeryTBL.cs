@@ -12,14 +12,12 @@ namespace TravelBook
     using System;
     using System.Collections.Generic;
     
-    public partial class userTBL
+    public partial class summeryTBL
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Password { get; set; }
-        public string username { get; set; }
-        public System.DateTime regDate { get; set; }
-        public string Email { get; set; }
+        public string subject { get; set; }
+        public string text { get; set; }
+        public string title { get; set; }
+        public string author { get; set; }
     }
 }
