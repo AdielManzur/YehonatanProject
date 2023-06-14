@@ -2,19 +2,19 @@
 
     <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-        <div class="jumbotron" id ="jumbotronClass" style="display: flex; flex-direction: column; height: auto" runat="server">
-            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick" StaticSubMenuIndent="16px" style="display:flex;" >
-                <Items>
-                    <asp:MenuItem Text="Math" Value="MathBtn"></asp:MenuItem>
-                    <asp:MenuItem Text="Physics" Value="PhysicsBtn"></asp:MenuItem>
-                    <asp:MenuItem Text="English" Value="EnglishBtn"></asp:MenuItem>
-                    <asp:MenuItem Text="History" Value="HistoryBtn"></asp:MenuItem>
-                    <asp:MenuItem Text="Computers" Value="ComputersBtn"></asp:MenuItem>
-                    <asp:MenuItem Text="Hebrew" Value="HebrewBtn"></asp:MenuItem>
-                    <asp:MenuItem Text="Science" Value="ScienceBtn"></asp:MenuItem>
-                    <asp:MenuItem Text="All" Value="AllBtn"></asp:MenuItem>
-
-                </Items>
+        <div class="jumbotron" id ="jumbotronClass" style="display: flex; flex-direction: column; height: auto" runat="server">           
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick" StaticSubMenuIndent="16px" style="display:flex;">
+              <Items>
+                <asp:MenuItem Text="Math" Value="MathBtn"></asp:MenuItem>
+                <asp:MenuItem Text="Physics" Value="PhysicsBtn"></asp:MenuItem>
+                <asp:MenuItem Text="English" Value="EnglishBtn"></asp:MenuItem>
+                <asp:MenuItem Text="History" Value="HistoryBtn"></asp:MenuItem>
+                <asp:MenuItem Text="Computers" Value="ComputersBtn"></asp:MenuItem>
+                <asp:MenuItem Text="Hebrew" Value="HebrewBtn"></asp:MenuItem>
+                <asp:MenuItem Text="Science" Value="ScienceBtn"></asp:MenuItem>
+                <asp:MenuItem Text="All" Value="AllBtn"></asp:MenuItem>
+              </Items>
+              <StaticMenuItemStyle CssClass="menu-item" />
             </asp:Menu>
 
             <h2 style="align-self:center">Feed</h2>
