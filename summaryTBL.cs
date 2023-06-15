@@ -12,7 +12,7 @@ namespace TravelBook
     using System;
     using System.Collections.Generic;
     
-    public partial class summeryTBL
+    public partial class summaryTBL
     {
         public int Id { get; set; }
         public string subject { get; set; }

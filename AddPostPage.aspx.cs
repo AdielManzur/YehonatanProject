@@ -18,7 +18,7 @@ namespace TravelBook
 
         protected void OnClick(object sender, EventArgs e)
         {
-            summeryTBL tbl = new summeryTBL();
+            summaryTBL tbl = new summaryTBL();
             tbl.subject = subjectDropdown.SelectedValue.Trim();
             tbl.text = content.Text;
             tbl.title = title.Text;
@@ -31,7 +31,7 @@ namespace TravelBook
                 }
             } 
             tbl.author = thisUser.username;
-            db.summeryTBL.Add(tbl);
+            db.summaryTBL.Add(tbl);
             db.SaveChanges();
             content.Text = "";
             title.Text = "";

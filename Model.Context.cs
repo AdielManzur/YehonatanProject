@@ -26,6 +26,6 @@ namespace TravelBook
         }
     
         public virtual DbSet<userTBL> userTBL { get; set; }
-        public virtual DbSet<summeryTBL> summeryTBL { get; set; }
+        public virtual DbSet<summaryTBL> summaryTBL { get; set; }
     }
 }

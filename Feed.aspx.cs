@@ -12,29 +12,31 @@ namespace TravelBook
     public partial class _Default : Page
     {
         public dbEntities db = new dbEntities();
-        public List<summeryTBL> summariesToShow = new List<summeryTBL>();
+        public List<summaryTBL> summariesToShow = new List<summaryTBL>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            summariesToShow = db.summeryTBL.ToList();
+            summariesToShow = db.summaryTBL.ToList();
         }
 
-        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+        
+
+        protected void menuStrip_MenuItemClick(object sender, MenuEventArgs e)
         {
-            summariesToShow = db.summeryTBL.ToList();
-            List<summeryTBL> summariesToRemove = new List<summeryTBL>();
-            if(e.Item.Text == "All")
+            summariesToShow = db.summaryTBL.ToList();
+            List<summaryTBL> summariesToRemove = new List<summaryTBL>();
+            if (e.Item.Text == "All")
             {
                 return;
             }
-            foreach(summeryTBL summaryToRemove in summariesToShow)
+            foreach (summaryTBL summaryToRemove in summariesToShow)
             {
-                if(summaryToRemove.subject != e.Item.Text)
+                if (summaryToRemove.subject != e.Item.Text)
                 {
                     summariesToRemove.Add(summaryToRemove);
                 }
-                
+
             }
-            foreach(summeryTBL summaryToRemove in summariesToRemove)
+            foreach (summaryTBL summaryToRemove in summariesToRemove)
             {
                 summariesToShow.Remove(summaryToRemove);
             }

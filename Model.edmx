@@ -5,7 +5,7 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="summeryTBL">
+        <EntityType Name="summaryTBL">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -28,7 +28,7 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityContainer Name="dbModelStoreContainer">
-          <EntitySet Name="summeryTBL" EntityType="Self.summeryTBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="summaryTBL" EntityType="Self.summaryTBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="userTBL" EntityType="Self.userTBL" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -37,7 +37,7 @@
       <Schema Namespace="dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true" >
           <EntitySet Name="userTBL" EntityType="dbModel.userTBL" />
-          <EntitySet Name="summeryTBL" EntityType="dbModel.summeryTBL" />
+          <EntitySet Name="summaryTBL" EntityType="dbModel.summaryTBL" />
         </EntityContainer>
         <EntityType Name="userTBL">
           <Key>
@@ -51,7 +51,7 @@
           <Property Name="regDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="summeryTBL">
+        <EntityType Name="summaryTBL">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -80,9 +80,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="summeryTBL">
-            <EntityTypeMapping TypeName="dbModel.summeryTBL">
-              <MappingFragment StoreEntitySet="summeryTBL">
+          <EntitySetMapping Name="summaryTBL">
+            <EntityTypeMapping TypeName="dbModel.summaryTBL">
+              <MappingFragment StoreEntitySet="summaryTBL">
                 <ScalarProperty Name="author" ColumnName="author" />
                 <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="text" ColumnName="text" />
